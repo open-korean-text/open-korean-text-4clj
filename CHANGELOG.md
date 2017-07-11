@@ -21,6 +21,6 @@ All notable changes to this project will be documented in this file. This change
 ### Added
 - Initial project commit
 
-[Unreleased]: https://github.com/open-korean-text/open-korean-text-4clj/compare/releases-0.1.1...HEAD
-[0.1.1]: https://github.com/open-korean-text/open-korean-text-4clj/releases-0.1.0...releases-0.1.1
+[Unreleased]: https://github.com/open-korean-text/open-korean-text-4clj/compare/release-0.1.1...HEAD
+[0.1.1]: https://github.com/open-korean-text/open-korean-text-4clj/compare/release-0.1.0...release-0.1.1
 [0.1.0]: https://github.com/open-korean-text/open-korean-text-4clj/releases/tag/release-0.1.0
