@@ -4,15 +4,16 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 
 ## Dependencies
 
-FIXME
+[Leiningen](https://leiningen.org) dependency in project.clj: 
 
-## Installation
-
-FIXME
+	[open-korean-text-4clj "0.1.0-SNAPSHOT"]
+	
+Other dependencies
+org.clojure/clojure 1.8.0
+org.openkoreantext/open-korean-text 2.0.5
 
 ## Usages
 
-FIXME
 
 ## License
 
