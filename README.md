@@ -4,6 +4,9 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 
 
 ## Dependencies
+
+[![Clojars Project](https://img.shields.io/clojars/v/open-korean-text-4clj.svg)](https://clojars.org/open-korean-text-4clj)
+[![Dependency Status](https://www.versioneye.com/user/projects/59675517368b08000ebac2d0/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59675517368b08000ebac2d0)
 	
 * [org.clojure/clojure 1.8.0](https://github.com/clojure/clojure/releases/tag/clojure-1.8.0)
 * [org.openkoreantext/open-korean-text 2.0.5](https://github.com/open-korean-text/open-korean-text/releases/tag/open-korean-text-2.0.5)
@@ -15,6 +18,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 
 ```clojure
 [open-korean-text-4clj "0.1.0-SNAPSHOT"]
+
 ```
 
 #### normalize
@@ -23,11 +27,12 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 (normalize "한국어를 처리하는 예시입니닼ㅋㅋㅋㅋㅋ")
 ;=> "한국어를 처리하는 예시입니다ㅋㅋㅋ"
 ```
+
 #### tokenize
 
 * default operation
 ```clojure
-(tokenize "한국어를 처리하는 예시입니다 ㅋㅋ")
+(tokenize "한국어를 처리하는 예시입니닼ㅋㅋ")
 ;=> 
 [{:text "한국어", :pos :Noun, :offset 0, :length 3, :unknown false}
  {:text "를", :pos :Josa, :offset 3, :length 1, :unknown false}
@@ -36,11 +41,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
  {:text "예시", :pos :Noun, :offset 10, :length 2, :unknown false}
  {:text "입니", :pos :Adjective, :offset 12, :length 2, :unknown false}
  {:text "닼", :pos :Noun, :offset 14, :length 1, :unknown true}
- {:text "ㅋㅋ",
-  :pos :KoreanParticle,
-  :offset 15,
-  :length 2,
-  :unknown false}]
+ {:text "ㅋㅋ", :pos :KoreanParticle, :offset 15, :length 2, :unknown false}]
 nil
 ```
 
@@ -54,11 +55,7 @@ nil
  {:text "하는", :pos :Verb, :offset 7, :length 2, :unknown false}
  {:text "예시", :pos :Noun, :offset 10, :length 2, :unknown false}
  {:text "입니다", :pos :Adjective, :offset 12, :length 3, :unknown false}
- {:text "ㅋㅋ",
-  :pos :KoreanParticle,
-  :offset 15,
-  :length 2,
-  :unknown false}]
+ {:text "ㅋㅋ", :pos :KoreanParticle, :offset 15, :length 2, :unknown false}]
 nil
 ```
 
@@ -91,7 +88,6 @@ nil
 (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :as-strs true :norm true :stem true)
 ;=> ["한국어" "를" "처리" "하다" "예시" "이다" "ㅋㅋ"]
 ```
-
 
 #### tokenize-top-n
 ```clojure
@@ -152,9 +148,9 @@ nil
 [{:text "불방망이", :pos :Noun, :offset 0, :length 4, :unknown false}]
 ```
 
+
 ## License
 
 Copyright © 2017 [Seonho Kim](http://seonho.kim)
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License either version 1.0 or any later version.
