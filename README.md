@@ -32,7 +32,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 
 * default operation
 ```clojure
-(tokenize "한국어를 처리하는 예시입니다 ㅋㅋ")
+(tokenize "한국어를 처리하는 예시입니닼ㅋㅋ")
 ;=> 
 [{:text "한국어", :pos :Noun, :offset 0, :length 3, :unknown false}
  {:text "를", :pos :Josa, :offset 3, :length 1, :unknown false}
