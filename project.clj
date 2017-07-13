@@ -1,4 +1,4 @@
-(defproject open-korean-text-4clj "0.1.1-SNAPSHOT"
+(defproject open-korean-text-4clj "0.2"
   :description "Open Korean Text Processor wrapper for Clojure"
   :url "http://github.com/open-korean-text/open-korean-text-4clj"
   :license {:name "Eclipse Public License"

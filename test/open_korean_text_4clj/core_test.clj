@@ -6,33 +6,32 @@
       (normalize "한국어를 처리하는 예시입니닼ㅋㅋㅋㅋㅋ") => "한국어를 처리하는 예시입니다ㅋㅋㅋ")
 
 
-(facts
- "test tokenize"
+(facts "test tokenize"
 
- (fact "default operation"
-       (let [tokens (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ")]
-         (-> tokens count) => 8
-         (-> tokens (get 6) :text) => "닼"))
+       (fact "default operation"
+             (let [tokens (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ")]
+               (-> tokens count) => 8
+               (-> tokens (get 6) :text) => "닼"))
 
- (fact "with normalization"
-       (let [tokens (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :norm true)]
-         (-> tokens count) => 7
-         (-> tokens (get 5) :text) => "입니다"))
+       (fact "with normalization"
+             (let [tokens (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :norm true)]
+               (-> tokens count) => 7
+               (-> tokens (get 5) :text) => "입니다"))
 
- (fact "with normalization & stemming"
-       (let [tokens (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :norm true :stem true)]
-         (-> tokens count) => 7
-         (-> tokens (get 5) :text) => "이다"))
+       (fact "with normalization & stemming"
+             (let [tokens (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :norm true :stem true)]
+               (-> tokens count) => 7
+               (-> tokens (get 5) :text) => "이다"))
 
- (fact "as-strs (return texts only)"
-       (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :as-strs true)
-       => (contains "닼")
+       (fact "as-strs (return texts only)"
+             (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :as-strs true)
+             => (contains "닼")
 
-       (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :as-strs true :norm true)
-       => (contains "입니다")
+             (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :as-strs true :norm true)
+             => (contains "입니다")
 
-       (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :as-strs true :norm true :stem true)
-       => (contains "이다")))
+             (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :as-strs true :norm true :stem true)
+             => (contains "이다")))
 
 
 (fact "tokenize-top-n"
@@ -45,10 +44,16 @@
         s => (contains "연세대학교 보건 대학원")
         s => (contains "환영합니다")))
 
-(fact "extract-phrase"
-      (let [phrases (extract-phrase "한국어를 처리하는 예시입니닼ㅋㅋ")]
-        (-> phrases count) => 4
-        (-> phrases (get 2) :text) => "처리하는 예시"))
+(facts "extract-phrases"
+
+       (fact "default operation"
+             (let [phrases (extract-phrase "한국어를 처리하는 예시입니닼ㅋㅋ")]
+               (-> phrases count) => 4
+               (-> phrases (get 2) :text) => "처리하는 예시"))
+
+       (fact "as-strs (return texts only)"
+             (extract-phrase "한국어를 처리하는 예시입니닼ㅋㅋ" :as-strs true)
+             => (contains "처리하는 예시")))
 
 (fact "split-sentences"
       (-> (split-sentences "가을이다! 남자는 가을을 탄다...... 그렇지? 루루야! 버버리코트 사러 가자!!!!")
