@@ -5,7 +5,6 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 
 ## Dependencies
 
-[![Clojars Project](https://img.shields.io/clojars/v/open-korean-text-4clj.svg)](https://clojars.org/open-korean-text-4clj)
 [![Dependency Status](https://www.versioneye.com/user/projects/59675517368b08000ebac2d0/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59675517368b08000ebac2d0)
 	
 * [org.clojure/clojure 1.8.0](https://github.com/clojure/clojure/releases/tag/clojure-1.8.0)
@@ -14,12 +13,26 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 
 ## Get Started
 
+### Dependencies
+
 [Leiningen](https://leiningen.org) dependency in `project.clj` (from [Clojars](https://clojars.org/open-korean-text-4clj)): 
 
-```clojure
-[open-korean-text-4clj "0.2"]
+[![Clojars Project](https://img.shields.io/clojars/v/open-korean-text-4clj.svg)](https://clojars.org/open-korean-text-4clj)
 
+```clojure
+[open-korean-text-4clj "0.2.1"]
 ```
+
+[Maven](http://maven.apache.org/) dependency information in pom.xml:
+```xml
+<dependency>
+  <groupId>open-korean-text-4clj</groupId>
+  <artifactId>open-korean-text-4clj</artifactId>
+  <version>0.2.1</version>
+</dependency>
+```
+
+### Usages
 
 #### normalize
 

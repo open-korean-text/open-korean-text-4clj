@@ -7,4 +7,4 @@
                  [org.openkoreantext/open-korean-text "2.0.5"]
                  [midje "1.8.3"]]
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
-  																	 :creds :gpg}]])
+                                     :creds :gpg}]])
