@@ -17,7 +17,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 [Leiningen](https://leiningen.org) dependency in `project.clj` (from [Clojars](https://clojars.org/open-korean-text-4clj)): 
 
 ```clojure
-[open-korean-text-4clj "0.1.0-SNAPSHOT"]
+[open-korean-text-4clj "0.2"]
 
 ```
 
