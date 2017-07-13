@@ -111,15 +111,19 @@ nil
 ;=> "연세대학교 보건 대학원에 오신것을 환영합니다!"
 ```
 
-#### extract-phrase
+#### extract-phrases
 ```clojure
-(extract-phrase "한국어를 처리하는 예시입니다 ㅋㅋ")
+(extract-phrases "한국어를 처리하는 예시입니다 ㅋㅋ")
 ;=> 
 [{:text "한국어", :offset 0, :length 3}
  {:text "처리", :offset 5, :length 2}
  {:text "처리하는 예시", :offset 5, :length 7}
  {:text "예시", :offset 10, :length 2}]
 nil
+
+(extract-phrases "한국어를 처리하는 예시입니다 ㅋㅋ" :as-strs true)
+;=> 
+["한국어" "처리" "처리하는 예시" "예시"]
 ```
 
 #### split-sentences
