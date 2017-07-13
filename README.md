@@ -82,11 +82,7 @@ nil
  {:text "하다", :pos :Verb, :offset 7, :length 2, :unknown false}
  {:text "예시", :pos :Noun, :offset 10, :length 2, :unknown false}
  {:text "이다", :pos :Adjective, :offset 12, :length 3, :unknown false}
- {:text "ㅋㅋ",
-  :pos :KoreanParticle,
-  :offset 15,
-  :length 2,
-  :unknown false}]
+ {:text "ㅋㅋ", :pos :KoreanParticle, :offset 15, :length 2, :unknown false}]
 nil
 ```
 
