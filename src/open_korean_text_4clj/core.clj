@@ -34,15 +34,20 @@
       tokens)))
 
 
-(defn extract-phrase [text & {:keys [^Boolean filter-spam ^Boolean enable-hashtags]
+(defn extract-phrases [text & {:keys [^Boolean filter-spam
+                                     ^Boolean enable-hashtags
+                                     ^Boolean as-strs]
                               :or {filter-spam true enable-hashtags true}}]
-  (-> (OpenKoreanTextProcessor/tokenize text)
-      (OpenKoreanTextProcessorJava/extractPhrases filter-spam enable-hashtags)
-      (->> (map #(assoc {}
-                        :text (.text %)
-                        :offset (.offset %)
-                        :length (.length %))))
-      vec))
+  (let [phrases (-> (OpenKoreanTextProcessor/tokenize text)
+                    (OpenKoreanTextProcessorJava/extractPhrases filter-spam enable-hashtags)
+                    (->> (map #(assoc {}
+                                      :text (.text %)
+                                      :offset (.offset %)
+                                      :length (.length %))))
+                    vec)]
+    (if as-strs
+      (vec (map :text phrases))
+      phrases)))
 
 
 (defn add-nouns-to-dictionay [nouns]
