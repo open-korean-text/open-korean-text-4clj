@@ -5,10 +5,8 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 
 ## Dependencies
 
-[![Dependency Status](https://www.versioneye.com/user/projects/59675517368b08000ebac2d0/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59675517368b08000ebac2d0)
-	
 * [org.clojure/clojure 1.8.0](https://github.com/clojure/clojure/releases/tag/clojure-1.8.0)
-* [org.openkoreantext/open-korean-text 2.0.5](https://github.com/open-korean-text/open-korean-text/releases/tag/open-korean-text-2.0.5)
+* [org.openkoreantext/open-korean-text 2.1.0](https://github.com/open-korean-text/open-korean-text/releases/tag/open-korean-text-2.1.0)
 
 
 ## Get Started
@@ -20,7 +18,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 [![Clojars Project](https://img.shields.io/clojars/v/open-korean-text-4clj.svg)](https://clojars.org/open-korean-text-4clj)
 
 ```clojure
-[open-korean-text-4clj "0.2.1"]
+[open-korean-text-4clj "0.2.2"]
 ```
 
 [Maven](http://maven.apache.org/) dependency information in pom.xml:
@@ -28,7 +26,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 <dependency>
   <groupId>open-korean-text-4clj</groupId>
   <artifactId>open-korean-text-4clj</artifactId>
-  <version>0.2.1</version>
+  <version>0.2.2</version>
 </dependency>
 ```
 
@@ -82,11 +80,7 @@ nil
  {:text "하다", :pos :Verb, :offset 7, :length 2, :unknown false}
  {:text "예시", :pos :Noun, :offset 10, :length 2, :unknown false}
  {:text "이다", :pos :Adjective, :offset 12, :length 3, :unknown false}
- {:text "ㅋㅋ",
-  :pos :KoreanParticle,
-  :offset 15,
-  :length 2,
-  :unknown false}]
+ {:text "ㅋㅋ", :pos :KoreanParticle, :offset 15, :length 2, :unknown false}]
 nil
 ```
 

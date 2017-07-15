@@ -47,12 +47,12 @@
 (facts "extract-phrases"
 
        (fact "default operation"
-             (let [phrases (extract-phrase "한국어를 처리하는 예시입니닼ㅋㅋ")]
+             (let [phrases (extract-phrases "한국어를 처리하는 예시입니닼ㅋㅋ")]
                (-> phrases count) => 4
                (-> phrases (get 2) :text) => "처리하는 예시"))
 
        (fact "as-strs (return texts only)"
-             (extract-phrase "한국어를 처리하는 예시입니닼ㅋㅋ" :as-strs true)
+             (extract-phrases "한국어를 처리하는 예시입니닼ㅋㅋ" :as-strs true)
              => (contains "처리하는 예시")))
 
 (fact "split-sentences"
