@@ -1,3 +1,4 @@
 target
 .nrepl-port
-pom.xml
+.lein*
+pom.xml*
