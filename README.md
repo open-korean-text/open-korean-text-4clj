@@ -1,4 +1,6 @@
-# open-korean-text-4clj
+# open-korean-text-4clj 
+[![Clojars Project](https://img.shields.io/clojars/v/open-korean-text-4clj.svg)](https://clojars.org/open-korean-text-4clj)
+[![Build Status](https://travis-ci.org/open-korean-text/open-korean-text-4clj.svg?branch=master)](https://travis-ci.org/open-korean-text/open-korean-text-4clj)
 
 A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-text) wrapper for Clojure. 
 
@@ -14,8 +16,6 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 ### Dependencies
 
 [Leiningen](https://leiningen.org) dependency in `project.clj` (from [Clojars](https://clojars.org/open-korean-text-4clj)): 
-
-[![Clojars Project](https://img.shields.io/clojars/v/open-korean-text-4clj.svg)](https://clojars.org/open-korean-text-4clj)
 
 ```clojure
 [open-korean-text-4clj "0.2.2"]
