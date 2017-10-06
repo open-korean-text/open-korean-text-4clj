@@ -1,10 +1,13 @@
 (ns open-korean-text-4clj.core
-  (:import [org.openkoreantext.processor OpenKoreanTextProcessor OpenKoreanTextProcessorJava]
+  (:import [org.openkoreantext.processor
+            OpenKoreanTextProcessor OpenKoreanTextProcessorJava KoreanPosJava]
            [org.openkoreantext.processor.tokenizer KoreanTokenizer$KoreanToken]
            [scala.collection JavaConverters]))
 
+
 (defn normalize [text]
   (OpenKoreanTextProcessor/normalize text))
+
 
 (defn- compose-token-info-map [^KoreanTokenizer$KoreanToken token & {:keys [^Boolean stem]
                                                                      :or {stem false}}]
@@ -54,6 +57,10 @@
   (OpenKoreanTextProcessorJava/addNounsToDictionary nouns))
 
 
+(defn add-words-to-dictionary [^KoreanPosJava pos words]
+  (OpenKoreanTextProcessorJava/addWordsToDictionary pos words))
+
+
 (defn split-sentences [text]
   (->> (OpenKoreanTextProcessorJava/splitSentences text)
        (map #(assoc {}
@@ -61,6 +68,7 @@
                     :start (.start %)
                     :end (.end %)))
        vec))
+
 
 (defn detokenize [tokens]
   (OpenKoreanTextProcessorJava/detokenize tokens))

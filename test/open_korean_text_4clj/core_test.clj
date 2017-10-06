@@ -1,6 +1,7 @@
 (ns open-korean-text-4clj.core-test
   (:require [midje.sweet :refer :all]
-            [open-korean-text-4clj.core :refer :all]))
+            [open-korean-text-4clj.core :refer :all])
+  (:import [org.openkoreantext.processor KoreanPosJava]))
 
 (fact "test normalize"
       (normalize "한국어를 처리하는 예시입니닼ㅋㅋㅋㅋㅋ") => "한국어를 처리하는 예시입니다ㅋㅋㅋ")
@@ -62,12 +63,20 @@
       =>
       "남자는 가을을 탄다......")
 
-(fact "add-nouns-to-dictionay"
+(fact "add-nouns-to-dictionary"
       (-> (tokenize "불방망이") (get 0) :text)
       => "불"
 
-      (add-nouns-to-dictionay ["불방망이"])
+      (add-nouns-to-dictionary ["불방망이"])
 
       (-> (tokenize "불방망이") (get 0) :text)
       => "불방망이")
 
+(fact "add-words-to-dictionary"
+      (-> (tokenize "그라믄 당신 먼저 얼렁 가이소") (get 0) :text)
+      => "그"
+
+      (add-words-to-dictionary KoreanPosJava/Conjunction ["그라믄"])
+
+      (-> (tokenize "그라믄 당신 먼저 얼렁 가이소") (get 0) :text)
+      => "그라믄")
