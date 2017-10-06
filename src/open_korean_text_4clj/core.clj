@@ -50,7 +50,7 @@
       phrases)))
 
 
-(defn add-nouns-to-dictionay [nouns]
+(defn add-nouns-to-dictionary [nouns]
   (OpenKoreanTextProcessorJava/addNounsToDictionary nouns))
 
 
