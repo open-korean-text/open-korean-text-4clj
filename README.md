@@ -8,7 +8,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 ## Dependencies
 
 * [org.clojure/clojure 1.8.0](https://github.com/clojure/clojure/releases/tag/clojure-1.8.0)
-* [org.openkoreantext/open-korean-text 2.1.2](https://github.com/open-korean-text/open-korean-text/releases/tag/open-korean-text-2.1.0)
+* [org.openkoreantext/open-korean-text 2.1.2](https://github.com/open-korean-text/open-korean-text/releases/tag/open-korean-text-2.1.2)
 
 
 ## Get Started
