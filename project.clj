@@ -10,4 +10,6 @@
   :profiles {:dev {:dependencies [[midje "1.8.3"]]
                    :plugins [[lein-midje "3.2.1"]]}}
 
+  :repl-options {:init-ns open-korean-text-4clj.core}
+
   :lein-release {:deploy-via :clojars})
