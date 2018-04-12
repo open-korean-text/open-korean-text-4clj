@@ -7,8 +7,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 
 ## Dependencies
 
-* [org.clojure/clojure 1.8.0](https://github.com/clojure/clojure/releases/tag/clojure-1.8.0)
-* [org.openkoreantext/open-korean-text 2.1.2](https://github.com/open-korean-text/open-korean-text/releases/tag/open-korean-text-2.1.2)
+* [org.openkoreantext/open-korean-text 2.2.0](https://github.com/open-korean-text/open-korean-text/releases/tag/open-korean-text-2.2.0)
 
 
 ## Get Started
@@ -18,7 +17,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 [Leiningen](https://leiningen.org) dependency in `project.clj` (from [Clojars](https://clojars.org/open-korean-text-4clj)): 
 
 ```clojure
-[open-korean-text-4clj "0.2.3"]
+[open-korean-text-4clj "0.2.4"]
 ```
 
 [Maven](http://maven.apache.org/) dependency information in pom.xml:
@@ -26,7 +25,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 <dependency>
   <groupId>open-korean-text-4clj</groupId>
   <artifactId>open-korean-text-4clj</artifactId>
-  <version>0.2.3</version>
+  <version>0.2.4</version>
 </dependency>
 ```
 
@@ -166,6 +165,6 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 
 ## License
 
-Copyright © 2017 [Seonho Kim](http://seonho.kim)
+Copyright © 2018 [Seonho Kim](http://seonho.kim)
 
 Distributed under the Eclipse Public License either version 1.0 or any later version.
