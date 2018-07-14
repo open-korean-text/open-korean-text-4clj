@@ -7,7 +7,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 
 ## Dependencies
 
-* [org.openkoreantext/open-korean-text 2.2.0](https://github.com/open-korean-text/open-korean-text/releases/tag/open-korean-text-2.2.0)
+* [org.openkoreantext/open-korean-text 2.3.0](https://github.com/open-korean-text/open-korean-text/releases/tag/open-korean-text-2.3.0)
 
 
 ## Get Started
@@ -17,15 +17,16 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 [Leiningen](https://leiningen.org) dependency in `project.clj` (from [Clojars](https://clojars.org/open-korean-text-4clj)): 
 
 ```clojure
-[open-korean-text-4clj "0.2.4"]
+[open-korean-text-4clj "0.2.5"]
 ```
 
 [Maven](http://maven.apache.org/) dependency information in pom.xml:
+
 ```xml
 <dependency>
   <groupId>open-korean-text-4clj</groupId>
   <artifactId>open-korean-text-4clj</artifactId>
-  <version>0.2.4</version>
+  <version>0.2.5</version>
 </dependency>
 ```
 
@@ -41,6 +42,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 #### tokenize
 
 * default operation
+
 ```clojure
 (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ")
 ;=> [{:text "한국어", :pos :Noun, :offset 0, :length 3, :unknown false}
@@ -55,6 +57,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 ```
 
 * with normalization
+
 ```clojure
 (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :norm true)
 ;=> [{:text "한국어", :pos :Noun, :offset 0, :length 3, :unknown false}
@@ -68,6 +71,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 ```
 
 * with normalization & stemming
+
 ```clojure
 (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :norm true :stem true)
 ;=> [{:text "한국어", :pos :Noun, :offset 0, :length 3, :unknown false}
@@ -81,6 +85,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 ```
 
 * as-strs (return texts only)
+
 ```clojure
 (tokenize "한국어를 처리하는 예시입니닼ㅋㅋ" :as-strs true)
 ;=> ["한국어" "를" "처리" "하는" "예시" "입니" "닼" "ㅋㅋ"]
@@ -93,6 +98,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 ```
 
 #### tokenize-top-n
+
 ```clojure
 (tokenize-top-n "대선 후보" 3)
 ;=> ([[{:text "대선", :pos :Noun, :offset 0, :length 2, :unknown false}]
@@ -108,12 +114,14 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 ```
 
 #### detokenize
+
 ```clojure
 (detokenize ["연세", "대학교", "보건", "대학원","에","오신","것","을","환영","합니다", "!"])
 ;=> "연세대학교 보건 대학원에 오신것을 환영합니다!"
 ```
 
 #### extract-phrases
+
 ```clojure
 (extract-phrases "한국어를 처리하는 예시입니다 ㅋㅋ")
 ;=> [{:text "한국어", :offset 0, :length 3}
@@ -127,6 +135,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 ```
 
 #### split-sentences
+
 ```clojure
 (split-sentences "가을이다! 남자는 가을을 탄다...... 그렇지? 루루야! 버버리코트 사러 가자!!!!")
 ;=> [{:text "가을이다!", :start 0, :end 5}
@@ -138,6 +147,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 ```
 
 #### add-nouns-to-dictionary
+
 ```clojure
 (tokenize "불방망이")
 ;=> [{:text "불", :pos :Noun, :offset 0, :length 1, :unknown false} 
@@ -151,7 +161,9 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 ```
 
 #### add-words-to-dictionary 
+
 * added in 0.2.3
+
 ```clojure
 (tokenize "그라믄")
 ;=> [{:text "그", :pos :Noun, :offset 0, :length 1, :unknown false} {:text "라", :pos :Josa, :offset 1, :length 1, :unknown false} {:text "믄", :pos :Modifier, :offset 2, :length 1, :unknown false}]
