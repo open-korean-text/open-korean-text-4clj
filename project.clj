@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [org.openkoreantext/open-korean-text "2.3.0"]]
+                 [org.openkoreantext/open-korean-text "2.3.1"]]
 
   :repl-options {:init-ns open-korean-text-4clj.core}
 
