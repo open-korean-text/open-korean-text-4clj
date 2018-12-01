@@ -7,7 +7,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 
 ## Dependencies
 
-* [org.openkoreantext/open-korean-text 2.3.0](https://github.com/open-korean-text/open-korean-text/releases/tag/open-korean-text-2.3.0)
+* [org.openkoreantext/open-korean-text 2.3.1](https://github.com/open-korean-text/open-korean-text/releases/tag/open-korean-text-2.3.1)
 
 
 ## Get Started
@@ -17,7 +17,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 [Leiningen](https://leiningen.org) dependency in `project.clj` (from [Clojars](https://clojars.org/open-korean-text-4clj)): 
 
 ```clojure
-[open-korean-text-4clj "0.2.5"]
+[open-korean-text-4clj "0.3"]
 ```
 
 [Maven](http://maven.apache.org/) dependency information in pom.xml:
@@ -26,7 +26,7 @@ A [Open Korean Text Processor](https://github.com/open-korean-text/open-korean-t
 <dependency>
   <groupId>open-korean-text-4clj</groupId>
   <artifactId>open-korean-text-4clj</artifactId>
-  <version>0.2.5</version>
+  <version>0.3</version>
 </dependency>
 ```
 
